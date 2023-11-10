@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication5.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="400.0" prefWidth="800.0">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="login_form" layoutX="5.0" layoutY="5.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #E0F4FF;" stylesheets="@Login.css">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-7.0" prefHeight="512.0" prefWidth="300.0" style="-fx-background-color: #0174BE;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-user-100(2).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <TextField fx:id="login_username" layoutX="384.0" layoutY="170.0" prefHeight="39.0" prefWidth="329.0" promptText="Username " style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="334.0" layoutY="14.0" prefHeight="106.0" prefWidth="430.0" text="  Sign In" textFill="#0174be" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="High Tower Text" size="96.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="331.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-user-90.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="331.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-password-50.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="login_btn" layoutX="384.0" layoutY="306.0" mnemonicParsing="false" onAction="#login" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Login" />
+                  <Button fx:id="login_createAccount" layoutX="385.0" layoutY="452.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Create Account" />
+                  <CheckBox fx:id="login_selectshowpassword" layoutX="384.0" layoutY="277.0" mnemonicParsing="false" onAction="#showPassword" text="Show Password" textFill="#0174be" />
+                  <Label layoutX="492.0" layoutY="423.0" text="Register Account" textFill="#0174be">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="login_showpassword" layoutX="385.0" layoutY="225.0" prefHeight="43.0" prefWidth="329.0" promptText="Show Password" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="login_password" layoutX="384.0" layoutY="225.0" prefHeight="43.0" prefWidth="329.0" promptText="Password" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+                  <Hyperlink fx:id="login_forgetpassword" layoutX="585.0" layoutY="271.0" onAction="#switchForm" text="Forget Password?" textFill="#0174be">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" fx:id="signup_form" layoutX="8.0" layoutY="5.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #E0F4FF;" stylesheets="@Login.css" visible="false">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-7.0" prefHeight="512.0" prefWidth="300.0" style="-fx-background-color: #0174BE;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-add-user-100(1).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <TextField fx:id="signup_email" layoutX="384.0" layoutY="79.0" prefHeight="29.0" prefWidth="329.0" promptText="Email Address" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="328.0" layoutY="-13.0" prefHeight="106.0" prefWidth="430.0" text="  Sign Up Account" textFill="#0174be" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="High Tower Text" size="52.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="331.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-email-100.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="331.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-password-50.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="signup_btn" layoutX="384.0" layoutY="359.0" mnemonicParsing="false" onAction="#register" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Sign Up" />
+                  <Button fx:id="signup_loginAccount" layoutX="383.0" layoutY="452.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Login Account" />
+                  <Label layoutX="492.0" layoutY="428.0" text="Sign IN Account" textFill="#0174be">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="signup_password" layoutX="384.0" layoutY="170.0" prefHeight="38.0" prefWidth="329.0" promptText="Password" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="signup_username" layoutX="384.0" layoutY="125.0" prefHeight="35.0" prefWidth="329.0" promptText="Username" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="331.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-user-90.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="signup_confirmp" layoutX="384.0" layoutY="218.0" prefHeight="38.0" prefWidth="329.0" promptText="Confirme Password" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="331.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-checkmark-100.png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox fx:id="signup_selecQ" layoutX="384.0" layoutY="267.0" prefHeight="38.0" prefWidth="329.0" promptText="Select a Question" />
+                  <TextField fx:id="signup_answer" layoutX="384.0" layoutY="315.0" prefHeight="35.0" prefWidth="329.0" promptText="You're Answer" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" fx:id="forget_form" layoutX="4.0" layoutY="5.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #E0F4FF;" stylesheets="@Login.css" visible="false">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-7.0" prefHeight="512.0" prefWidth="300.0" style="-fx-background-color: #0174BE;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-lock-192(1).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <TextField fx:id="forget_username" layoutX="384.0" layoutY="151.0" prefHeight="39.0" prefWidth="329.0" promptText="Username " style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="350.0" layoutY="14.0" prefHeight="106.0" prefWidth="430.0" text="Foget Password" textFill="#0174be" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="High Tower Text" size="52.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="331.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-user-90.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="forget_procedbtn" layoutX="384.0" layoutY="304.0" mnemonicParsing="false" onAction="#forgetpassword" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Proced" />
+                  <Button fx:id="forget_backbtn" layoutX="385.0" layoutY="452.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Back" />
+                  <ComboBox fx:id="forget_selectQ" layoutX="385.0" layoutY="208.0" prefHeight="38.0" prefWidth="329.0" promptText="Select Question" />
+                  <TextField fx:id="forget_answer" layoutX="385.0" layoutY="256.0" prefHeight="39.0" prefWidth="329.0" promptText="Answer" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" fx:id="recover_form" layoutX="5.0" layoutY="7.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #E0F4FF;" stylesheets="@Login.css" visible="false">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-7.0" prefHeight="512.0" prefWidth="300.0" style="-fx-background-color: #0174BE;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-lock-192(1).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Label layoutX="350.0" layoutY="14.0" prefHeight="106.0" prefWidth="430.0" text="Recover Password" textFill="#0174be" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="High Tower Text" size="52.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="recover_procedbtn" layoutX="384.0" layoutY="285.0" mnemonicParsing="false" onAction="#Update_new_Password" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Recover Password" />
+                  <Button fx:id="recover_backbtn" layoutX="385.0" layoutY="452.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Back" />
+                  <PasswordField fx:id="recover_newp" layoutX="384.0" layoutY="184.0" prefHeight="38.0" prefWidth="329.0" promptText="New Password" style="-fx-background-color: #E0F4FF;" styleClass="border" stylesheets="@Login.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+                  <ImageView fitHeight="35.0" fitWidth="31.0" layoutX="336.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-password-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="31.0" layoutX="336.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-checkmark-100.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="recover_confirmp" layoutX="384.0" layoutY="232.0" prefHeight="43.0" prefWidth="329.0" promptText="Confirme your Password" style="-fx-background-color: #E0F4FF;" styleClass="border">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" fx:id="home_page" layoutX="15.0" layoutY="17.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #E0F4FF;" stylesheets="@Login.css" visible="false">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-7.0" prefHeight="512.0" prefWidth="300.0" style="-fx-background-color: #0174BE;">
+                     <children>
+                        <ImageView fitHeight="466.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-user-100.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Label layoutX="350.0" layoutY="14.0" prefHeight="106.0" prefWidth="430.0" text="     Welcome !!" textFill="#0174be" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="High Tower Text" size="52.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="home_Cbtn" layoutX="384.0" layoutY="191.0" mnemonicParsing="false" onAction="#home" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="Click here Please" />
+                  <Button fx:id="home_lobtn" layoutX="385.0" layoutY="255.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="329.0" styleClass="btn-button" text="logout" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
